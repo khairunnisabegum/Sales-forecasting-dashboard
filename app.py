@@ -1,16 +1,5 @@
 """
 Streamlit Dashboard — End-to-End Sales Forecasting & Demand Intelligence System
-Task 7 deliverable.
-
-Run locally with:  streamlit run app.py
-Deploy on Streamlit Community Cloud by pushing this file + train.csv +
-requirements.txt to a public GitHub repo, then connecting the repo at
-https://share.streamlit.io
-
-This app RECOMPUTES everything live from train.csv on each run (no
-pre-saved model files) — simpler to submit and reason about, at the
-cost of the Forecast Explorer page taking a few seconds to train a
-fresh XGBoost model whenever you change the category/region dropdown.
 """
 
 import streamlit as st
@@ -122,9 +111,6 @@ page = st.sidebar.radio(
     ["1. Sales Overview", "2. Forecast Explorer", "3. Anomaly Report", "4. Product Demand Segments"]
 )
 st.sidebar.markdown("---")
-st.sidebar.caption("Superstore Sales dataset — 4 years of daily transactions, "
-                    "aggregated and modeled live from train.csv.")
-
 # ============================================================
 # PAGE 1 — SALES OVERVIEW DASHBOARD
 # ============================================================
